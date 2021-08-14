@@ -15,28 +15,27 @@ typedef pair<double, double> pairs;
 int main(){
 	// 0 Input the data
 	cout <<"The L1-GNIO testfile (in C++), Version 1.0, author: Xuyu Chen \n" << endl;
-	// Part I -- Reading data from python --  Be Care full of the STACK OVERFLOW
+	// Part I -- Reading data from txt --  Be carefull of the STACK OVERFLOW error
 
-	cout << "Reading the data from python ....... \n" << endl;
+	cout << "Reading the data from txt ....... \n" << endl;
 	clock_t read_start, read_end;
 	FILE* fp;
 	read_start = clock();
 	// Ensure the PATH and LENGTH befor use 
-	errno_t read_state = fopen_s(&fp, "C:\\Users\\AI\\Desktop\\zzy\\random_e4_l1.txt", "r");
+	errno_t read_state = fopen_s(&fp, "data_all.txt", "r");
 
 	if (read_state != 0) {
 		cout << "Error: can't read the data \n" << endl;
 		exit(0);
 	}
 
-	double data_all[(5 * M - 1)];
-	//double* data_all= calloc((5 * M - 1), sizeof(double));
+	double data_all[(4 * M - 2)];
 
 	int i = 0;
 	while (1) {
 		fscanf_s(fp, "%lf", &data_all[i]);
 		i = i + 1;
-		if (i >= (5 * M - 1))
+		if (i >= (4 * M - 2))
 			break;
 	}
 	fclose(fp);
@@ -50,14 +49,13 @@ int main(){
 	double* w_read = NULL;
 	double* l_read = NULL;
 	double* m_read = NULL;
-	double* s_read = NULL;
+
 
 	d_read = data_all;
 	w_read = d_read + M;
 	l_read = w_read + M;
 	m_read = l_read + M - 1;
 
-	s_read = m_read + M - 1;
 
 
 
@@ -224,25 +222,12 @@ int main(){
 
 	comp_end = clock();
 
-	cout << "Solution succssful generated! Turn to test! \n" <<
-	"Computing time:" << (double)((comp_end - comp_start) * 0.001) << "s \n" << endl;
+	cout << "Solution succssful generated!  \n" <<
+	"Computing time:" << (double)((comp_end - comp_start) / CLOCK_PER_SEC ) << "s \n" << endl;
 	
-	
-	double check_tol = 1e-6;
-	double diff = 0.0;
-	printf("Start testing with torrence to be %.8f .... \n", check_tol);
-	for (int i = 0; i <= (M - 1); i++) {
-		diff = fabs(*s_read - solution[i]);
-		s_read++;
-		if (diff > check_tol) {
-			printf("Caution: the difference is larger than the torrence ! \n");
-			printf("The difference reaches %.8f \n", diff);
-			printf("The index is %d", i);
-		}
-	}
 
 
-	return 0;
+	return 1;
 
 
 
