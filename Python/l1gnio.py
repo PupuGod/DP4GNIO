@@ -2,7 +2,7 @@
 """
 Created on Mon Jun 14 2021
 
-@Purpose: Solving the l1 GNIO optimization
+@Purpose: Solving the l1 GNIO optimization (as a subroutine)
 @Version: 1.0
 
 @Data structure: SortedList from 
