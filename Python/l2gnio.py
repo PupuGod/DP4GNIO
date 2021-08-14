@@ -2,15 +2,11 @@
 """
 Created on Mon Jun 14 2021
 
-@Purpose: Solving the l1 GNIO optimization
+@Purpose: Solving the l2 GNIO optimization
 @Version: 1.0
-
-@Data structure: SortedList from 
-https://github.com/grantjenks/python-sortedcontainers
 
 @author: Xuyu Chen, PhD candidate
 @Insititution: School of Mathematical Sciences, Fudan University
-@The implementation is not perfect, for any bug, please email chenxy18@fudan.edu.cn
 """
 
 from collections import deque
