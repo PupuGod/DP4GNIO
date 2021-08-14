@@ -18,6 +18,12 @@ Moreover, to change the inputing data, we shall introduce meanings of the variab
 (2) w: a n dimenisonal positive np.array which contains weight in the loss function <br>
 (3) lbd: a n-1 dimensional non-negative np.array which controls (increasing) monotonicity <br>
 (4) mu: a n-1 dimensional non-negative np.array which controls (decreasing) monotonicity <br>
+(5) n : the dimensional (or length) of the data
+
+
+
+Directly run the runfile_gnio.py without any modification, one may obtain a example of appling l2-GNIO model on random data.
+
 
 
 The users can also read data from excels or other soruces into the memory if necessary, but this is not concluded in our runfile.
