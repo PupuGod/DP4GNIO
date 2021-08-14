@@ -8,28 +8,27 @@
 
 int main(void) {
 	printf("The L2-GNIO testfile (in C), Version 1.0, author: Xuyu Chen \n");
-	// Part I -- Reading data from python --  Be Care full of the STACK OVERFLOW
+	// Part I -- Reading data from txt ( Be Carefull of the STACK OVERFLOW error )
 
-	printf("Reading the data from python ....... \n");
+	printf("Reading the data from txt ....... \n");
 	clock_t read_start, read_end;
 	FILE* fp;
 	read_start = clock();
 	// Ensure the PATH and LENGTH befor use 
-	errno_t read_state = fopen_s(&fp, "C:\\Users\\AI\\Desktop\\zzy\\random_e4.txt", "r");
+	errno_t read_state = fopen_s(&fp, "random_e4.txt", "r");
 
 	if (read_state != 0) {
 		printf("Error: can't read the data \n");
 		exit(0);
 	}
 
-	double data_all[(5 * M - 1)];
-	//double* data_all= calloc((5 * M - 1), sizeof(double));
+	double data_all[(4 * M - 2)];
 
 	int i = 0;
 	while (1) {
 		fscanf_s(fp, "%lf", &data_all[i] );
 		i = i + 1;
-		if (i >= (5*M - 1))
+		if (i >= (4*M - 2))
 			break;
 	}
 	fclose(fp);
@@ -70,13 +69,13 @@ int main(void) {
 	double* w_read = NULL;
 	double* l_read = NULL;
 	double* m_read = NULL;
-	double* s_read = NULL;
+
 
 	d_read = data_all;
 	w_read = d_read + M;
 	l_read = w_read + M;
 	m_read = l_read + M - 1;
-	s_read = m_read + M - 1;
+
 
     // II.c The variables in iterations
 	double cur = 0.0;
@@ -252,55 +251,12 @@ int main(void) {
 		xold = xnew;
 	}
 	comp_end = clock();
-	printf("Solution succssful generated! Turn to test! \n");
-	printf("Computing time: %.16f s \n", (double) ( (comp_end - comp_start)*0.001) );
+	printf("Solution succssful generated! \n");
+	printf("Computing time: %.16f s \n", (double) ( (comp_end - comp_start) / CLOCKS_PER_SEC ) );
 
 
-	// Part V -- Check the solution and out put logfile
-	double check_tol = 1e-6;
-	double diff = 0.0;
-	printf("Start testing with torrence to be %.8f .... \n", check_tol);
-	for (int i = 0; i <= (M - 1); i++) {
-		diff = fabs(*s_read - solution[i]);
-		s_read++;
-		if (diff > check_tol) {
-			printf("Caution: the difference is larger than the torrence ! \n");
-			printf("The difference reaches %.8f \n", diff);
-			printf("The index is %d", i);
-		}
-	}
-	printf("Generating the logfile, please wait! \n");
-	// Output solution file & logfile
-	FILE* log_f = NULL;
-	errno_t log_state = fopen_s(&log_f, "logfile.txt", "a");
-
-	if (log_state != 0) {
-		printf("Error: can't open the file");
-		exit(0);
-	}
-	else {
-		fprintf(log_f, "======================================\n");
-		fprintf(log_f, "Solution successfully generated! \n");
-		fprintf(log_f, "Data size: ");
-		fprintf(log_f, "%d \n", M);
-		fprintf(log_f, "Data reading time:");
-		fprintf(log_f, " %lf s \n ", (double)((read_end - read_start) * 0.001));
-		fprintf(log_f, "Computing time:");
-		fprintf(log_f, " %lf s \n ", (double)((comp_end - comp_start) * 0.001));
-		fprintf(log_f, "======================================\n");
-	}
-
-	printf("Logfile successfully generated! \n");
-		/*
-		FILE * fout = NULL;
-		errno_t out_state = fopen_s(&log_f, "csolution.txt", "w");
-		for (int i = 0; i <= (M - 1); i++) {
-			fprintf(fout, "%lf \n", solution[i]);
-		}
-		fclose(fout);
-		*/
-
-	return 3;
+	
+	return 1;
 
 
 
