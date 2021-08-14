@@ -15,7 +15,7 @@ int main(void) {
 	FILE* fp;
 	read_start = clock();
 	// Ensure the PATH and LENGTH befor use 
-	errno_t read_state = fopen_s(&fp, "random_e4.txt", "r");
+	errno_t read_state = fopen_s(&fp, "data_all.txt", "r");
 
 	if (read_state != 0) {
 		printf("Error: can't read the data \n");
