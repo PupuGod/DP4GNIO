@@ -17,13 +17,13 @@ How to use:
 Required data format:
 in our software, we shall input path of a txt file and the problem size, the txt file should obey a required data format. Assume the problem size is $n$, then the first n rows should be the data, i.e., $y_1,....,y_n$, the ($n$+1)-th to 2$n$-th rows are the weights, i.e., $w_1,...,w_n$, the (2$n$+1)-th to (3$n$-1)-th should be $\lambda$s, i.e., $\lambda_1,....,\lambda_{n-1}$, and the 3$n$-th to (4$n$-2)-th should be $\mu$s, i.e., $\mu_1,....,\mu_{n-1}$. For example, if $n=2$, the txt file should be:
 
-`data_file.txt`:
-$y_1$
-$y_2$
-$w_1$
-$w_2$
-$\lambda_1$
-$\mu_1$
+`data_file.txt`: <br>
+$y_1$ <br>
+$y_2$ <br>
+$w_1$ <br>
+$w_2$ <br>
+$\lambda_1$<br>
+$\mu_1$<br>
 
 -------------------------------------------------------------------------------------------
 
