@@ -34,4 +34,4 @@ Notice: for huge data set, the user may encounter `StackOverflow Error`, the rea
 
 -----------------------------------------------------------------------------------------------
 
-For any question, please contact (chenxy18@fudan.edu.cn)
+For any question, please contact (chenxy18@fudan.edu.cn). If the formulas can’t be regularlly presented, please try MathJax extensions or plugins of your web browser.
