@@ -1,10 +1,10 @@
 DPGNIO (version 1.1):  
 C/C++ functions based on Dynamic Programming for Generalized Nearly Isotonic Optimization problems
-   Copyright (c) 2021 by 
+   Copyright © 2021 by 
 Xuyu Chen and Xudong Li
 
 The source code 'l1gnio.cpp' and 'l2gnio.c' are distributed under the GNU General Public License 2.0.  
-For commercial applications that may be incompatible with this license,  
+For commercial applications that may be incompatible with this license,  https://github.com/PupuGod/DP-for-GNIO/blob/main/Copyright.txt
 please contact the authors to discuss alternatives.
  
  This software is free software; you can redistribute it and/or 
@@ -15,5 +15,6 @@ please contact the authors to discuss alternatives.
  but WITHOUT ANY WARRANTY; without even the implied warranty of 
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
  GNU General Public License for more details. 
+
  
  
