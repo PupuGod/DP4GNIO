@@ -42,7 +42,9 @@ $\lambda_1$<br>
 $\mu_1$<br>
 
 
-One can always choose an alternative way to input the data as he/she wants
+Notice: one can always choose an alternative way to input the data as he/she wants
+
+
 ------------------------------------------------------------------------------------------------------
 
 
