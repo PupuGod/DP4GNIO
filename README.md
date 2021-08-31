@@ -1,8 +1,17 @@
-# DPGNIO--dynamic programming algorithm for solving generalized nearly isotonic optimization (GNIO) problem
+# DP4GNIO
+A dynamic programming algorithm for solving generalized nearly isotonic optimization (GNIO) problems.
+It currently contains  C/C++ implementations of the dynamic programming algorithm for solving 
+$\ell_1$-GNIO and $\ell_2$-GNIO problems.
 
-Author: Xuyu Chen and Xudong Li 
+**Authors: Xuyu Chen and Xudong Li.**
 
-Introduction: the DPGNIO softwares are C/C++ implementations of the dynamic programming algorithm (https://arxiv.org/pdf/2011.03305.pdf) designed for solvinng l1-GNIO or l2-GNIO problems 
+
+
+
+
+<!--
+The DPGNIO softwares are C/C++ implementations of the dynamic programming algorithm (https://arxiv.org/pdf/2011.03305.pdf) designed for solvinng l1-GNIO or l2-GNIO problems 
+-->
 
 ------------------------------------------------------------------------------------------------
 The following two functions are designed to solve GNIO problems: 
@@ -28,10 +37,10 @@ To use the softwares, please
 
 
 -------------------------------------------------------------------------------------------------
-In our source files, we provide a way to input data from txt files in the required format:
+In our source files, we provide the following way to input data from txt files:
 
 Required data format: <br>
-Assume the problem size is $n$, then the first n rows should be the data, i.e., $y_1,....,y_n$, the ($n$+1)-th to 2$n$-th rows are the weights, i.e., $w_1,...,w_n$, the (2$n$+1)-th to (3$n$-1)-th should be $\lambda$s, i.e., $\lambda_1,....,\lambda_{n-1}$, and the 3$n$-th to (4$n$-2)-th should be $\mu$s, i.e., $\mu_1,....,\mu_{n-1}$. For example, if $n=2$, the txt file should be:
+Assume the problem size is $n$, then the first $n$ rows should be $y_1,....,y_n$, the ($n$+1)-th to 2$n$-th rows are the weights, i.e., $w_1,...,w_n$, the (2$n$+1)-th to (3$n$-1)-th are $\lambda$s, i.e., $\lambda_1,....,\lambda_{n-1}$, and the 3$n$-th to (4$n$-2)-th are $\mu$s, i.e., $\mu_1,....,\mu_{n-1}$. For example, if $n=2$, the txt file reads:
 
 `data_file.txt`: <br>
 $y_1$ <br>
@@ -42,12 +51,17 @@ $\lambda_1$<br>
 $\mu_1$<br>
 
 
-Notice: one can always choose an alternative way to input the data as he/she wants
+Of course, one can always choose an alternative way to input the data as he/she wants.
 
 
 ------------------------------------------------------------------------------------------------------
 
+**Citation Information**:
+
+If you find the software DP4GNIO
+useful, please cite it in you publication as follows:
+*Zhensheng Yu, Xuyu Chen, and Xudong Li, A dynamic programming approach for generalized nearly isotonic optimization, arXiv:2011.03305, 2020*
 
 
-For any question, please contact chenxy18@fudan.edu.cn. 
+For any other questions, please contact chenxy18@fudan.edu.cn. 
 
