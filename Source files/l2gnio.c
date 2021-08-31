@@ -205,7 +205,7 @@ void l2gnio(double* data, double* w, double* l_read, double* m_read, const int n
 
 int main() {
 /*Section 1 -- Initialization*/
-	printf("The L2-GNIO computation software (C version)\nVersion 1.1\nAuthor: Xuyu Chen \n");
+	printf("The L2-GNIO computation software (C version)\nVersion 1.1 \n");
 	printf("============================================================\n");
 	printf("please check path and the size of the problem before use \n");
 	
