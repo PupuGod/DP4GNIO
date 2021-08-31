@@ -1,5 +1,7 @@
 # DP4GNIO
-C/C++ Implementations of the dynamic programming algorithm for solving $\ell_1$-GNIO and $\ell_2$-GNIO problems.
+A dynamic programming algorithm for solving generalized nearly isotonic optimization (GNIO) problems.
+It currently contains  C/C++ implementations of the dynamic programming algorithm for solving 
+$\ell_1−GNIOand\ell_2$-GNIO problems.
 
 Authors: Xuyu Chen and Xudong Li.
 
