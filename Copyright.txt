@@ -1,10 +1,10 @@
-DP4GNIO (version 1.2):  
-C/C++ functions based on Dynamic Programming for Generalized Nearly Isotonic Optimization problems
+DP4GNIO (version 1.1):  
+C/C++ implementations of the dynamic programming algorithm for solving $\ell_1$-GNIO and $\ell_2$-GNIO problems.
    Copyright © 2021 by 
 Xuyu Chen and Xudong Li
 
 The source code 'l1gnio.cpp' and 'l2gnio.c' are distributed under the GNU General Public License v3.  
-For commercial applications that may be incompatible with this license,  https://github.com/PupuGod/DP-for-GNIO/blob/main/Copyright.txt
+For commercial applications that may be incompatible with this license,  https://github.com/PupuGod/DP-for-GNIO/blob/main/LICENSE.txt
 please contact the authors to discuss alternatives. 
  
  
