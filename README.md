@@ -1,5 +1,5 @@
 # DP4GNIO
-Implementations of the dynamic programming algorithm for solving $\ell_1$-GNIO and $\ell_2$-GNIO problems.
+C/C++ Implementations of the dynamic programming algorithm for solving $\ell_1$-GNIO and $\ell_2$-GNIO problems.
 
 Authors: Xuyu Chen and Xudong Li.
 
