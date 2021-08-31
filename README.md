@@ -3,7 +3,7 @@ A dynamic programming algorithm for solving generalized nearly isotonic optimiza
 It currently contains  C/C++ implementations of the dynamic programming algorithm for solving 
 $\ell_1$-GNIO and $\ell_2$-GNIO problems.
 
-**Authors: Xuyu Chen and Xudong Li.**
+Authors: Xuyu Chen and Xudong Li.
 
 
 
@@ -20,15 +20,15 @@ The following two functions are designed to solve GNIO problems:
 
 
 In both of the functions, the inputs are:
-1. `data`: an array of real numbers which needs to be optimized, and it is the same as `y` in paper. <br>
-2. `w`: an array of postive real numbers, which contains the weight of loss functions. <br>
+1. `data`: an array of real input numbers, and it is the same as `y` in paper. <br>
+2. `w`: an array of positive real numbers, which contains the weight of loss functions. <br>
 3. `l_read`: an array of non-negative real numbers with its i-th entry to be $\lambda_i$. <br>
 4. `m_read`: an array of non-negative real numbers with its i-th entry to be $\mu_i$. <br>  
 5. `n`: problem size, also length of `data` or `w`, `n` should be larger than 1.<br>
-6. `solution`: an array to store the optimal solution of the GNIO problem. 
+6. `solution`: an array to store the optimal solution.
 
 -----------------------------------------------------------------------------------------------
-To use the softwares, please
+To use the software, please
 
 
 1. input data and parameters from desired sources
@@ -37,7 +37,7 @@ To use the softwares, please
 
 
 -------------------------------------------------------------------------------------------------
-In our source files, we provide the following way to input data from txt files:
+In our source files, we provide the following way to input data from the txt file:
 
 Required data format: <br>
 Assume the problem size is $n$, then the first $n$ rows should be $y_1,....,y_n$, the ($n$+1)-th to 2$n$-th rows are the weights, i.e., $w_1,...,w_n$, the (2$n$+1)-th to (3$n$-1)-th are $\lambda$s, i.e., $\lambda_1,....,\lambda_{n-1}$, and the 3$n$-th to (4$n$-2)-th are $\mu$s, i.e., $\mu_1,....,\mu_{n-1}$. For example, if $n=2$, the txt file reads:
