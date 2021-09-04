@@ -199,6 +199,8 @@ void l2gnio(double* data, double* w, double* l_read, double* m_read, const int n
 		solution[n - 1 - i] = xnew;
 		xold = xnew;
 	}
+	free(leftposi);
+	free(rightposi);
 
 }
 
