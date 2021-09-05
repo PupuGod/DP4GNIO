@@ -14,12 +14,14 @@ void l2gnio(double* data, double* w, double* l_read, double* m_read, const int n
 	double* df_b = NULL;
 	double dleft[2] = { 0.0,0.0 };
 	double dright[2] = { 0.0,0.0 };
-	bp = (double*)malloc((2 * n - 1) * sizeof(double));
-	df_a = (double*)malloc((2 * n - 1) * sizeof(double));
-	df_b = (double*)malloc((2 * n - 1) * sizeof(double));
-	bp += (n - 1);
-	df_a += (n - 1);
-	df_b += (n - 1); // set the pointers to the middle of the pre-required memory
+	double* bp_i = (double*)malloc((2 * n + 1) * sizeof(double));
+	double* df_a_i = (double*)malloc((2 * n + 1) * sizeof(double));
+	double* df_b_i = (double*)malloc((2 * n + 1) * sizeof(double));
+	
+	bp = bp_i + n;
+	df_a = df_a_i + n ;
+	df_b = df_b_i + n ;  // set the pointers to the middle of the pre-required memory
+	
 	*bp = 0.0;
 	*df_a = 0.0;
 	*df_b = 0.0;
@@ -199,9 +201,7 @@ void l2gnio(double* data, double* w, double* l_read, double* m_read, const int n
 		solution[n - 1 - i] = xnew;
 		xold = xnew;
 	}
-	free(leftposi);
-	free(rightposi);
-
+	free(leftposi); free(rightposi); free(bp_i); free(df_a_i); free(df_b_i);
 }
 
 
