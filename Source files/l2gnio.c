@@ -141,7 +141,7 @@ void l2gnio(double* data, double* w, double* l_read, double* m_read, const int n
 				bp_start = bp_end;
 				df_a_s = df_a_e;
 				df_b_s = df_b_e;
-				*df_a_e = a;
+				*df_a_e = -a;
 				*df_b_e = mu - b;
 
 			}
