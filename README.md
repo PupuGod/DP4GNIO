@@ -34,18 +34,8 @@ the second element to be the objective value.
 To use the software, please
 1. find the correct version corresponds to you OS (Windows, MacOS, Linux).
 2. make sure the python libraries `numpy` and `ctypes` are avaiable.
-3. use Python 3.8 or higher version
+3. excute `runfile_OS.py`. (OS = Win, Mac, Liunx)
 
-------------------------
-Example:
-`n = 100000`
-`data = np.random.uniform(-100, 100, n)`
-`w = 0.5 * np.ones(n)`
-`lbd = np.random.uniform(0, 1000, n-1)`
-`mu = np.random.uniform(0, 1000, n-1)`
-
-`result_l1 = gnio.l1gnio(data, w, lbd, mu)`
-`result_l2 = gnio.l2gnio(data, w, lbd, mu)`
 
 
 ------------------------------------------------------------------------------------------------------
