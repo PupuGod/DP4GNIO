@@ -20,11 +20,11 @@ The following two functions are designed to solve GNIO problems:
 
 In both of the functions, the parameters are:
 
-1. `data`: a ndarray of float.
-2.  `w`: a ndarray of positive float numbers.
-3. `lbd`: a ndarray of nonnegative float numbers, with  i-th entry to be $\lambda_i$
-4. `mu`: a ndarray of nonnegative float numbers, with  i-th entry to be $\mu_i$
-5. `check`: boolean value. If set to be `true`, the software checks whether the inputs are legal before computation, but may be time-consuming for large scales.
+1. `data`: a ndarray of float;
+2.  `w`: a ndarray of positive float numbers;
+3. `lbd`: a ndarray of nonnegative float numbers, with  i-th entry to be $\lambda_i$;
+4. `mu`: a ndarray of nonnegative float numbers, with  i-th entry to be $\mu_i$;
+5. `check`: a boolean value. If it is set to be `true`, the software verifies whether the inputs are legal before the computations. It might be time-consuming for large-scale problems.
 
 The returns are:
 `result`: A `2d-tuple` with first element to be the solution (also a ndarray), and 
@@ -34,7 +34,7 @@ the second element to be the objective value.
 To use the software, please
 1. find the correct version corresponds to you OS (Windows, MacOS, Linux).
 2. make sure the python libraries `numpy` and `ctypes` are avaiable.
-3. excute `runfile_OS.py`. (OS = Win, Mac, Liunx)
+3. excute `runfile_OS.py` (OS = Win, Mac, Liunx).
 
 
 
